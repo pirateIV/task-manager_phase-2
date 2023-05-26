@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasks</title>
+
+  <link rel="stylesheet" href="./task.css">
+  <link rel="stylesheet" href="./bootstrap.min.css">
+</head>
+<body>
+  <div class="tasks-container">
+    <div class="card">
+      <header>
+        <h1>Task Manager</h1>
+        <p><em>Save Tasks to </em> Local Storage</p>
+      </header>
+      <div class="card-actions">
+        <!-- <form> -->
+          <label for="task">Add Item.</label>
+          <div class="form-action position-relative">
+          <input type="text" placeholder="Add Task..." id="addInput">
+            <small id="message" class="text-success"></small>
+          </div>
+          <div class="btns">
+            <button id="btn" onclick="addTask()">Add Task</button>
+          </div>
+          <div class="d-flex align-items-center justify-content-between">
+            <label for="task">Filter Item.</label>
+            <a class="btn btn-info"  id="showFilter">Show filter</a>
+          </div>
+          <div>
+            <input id="filter-input" type="text" placeholder="Filter tasks...">
+          </div>
+        <!-- </form> -->
+      </div>
+    </div>
+    <div class="card mt-2">
+        <div class="tasks" id="tasks">
+          
+          <div class="task-element d-flex justify-content-between" id="task-element">
+            
+          </div>
+          
+        </div>
+    </div>
+  </div>
+  <script src="./sandbox.js"></script>
+</body>
+</html>

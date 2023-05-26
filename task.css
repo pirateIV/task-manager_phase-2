@@ -1,0 +1,108 @@
+* {
+    font-family: 'Harrington';
+    margin: 0;
+    padding: 0;
+}
+.tasks-container {
+    margin-top: 50px;
+}
+.card{
+    box-shadow: 2px 4px 4px 2px gray;
+    background-color: white;
+    max-width: 600px;
+    padding: 10px 20px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.card header h1 {
+    font-size: 26px;
+}
+.card header h1, p {
+    margin-top: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+.card header p {
+    font-weight: 700;
+    font-family: 'Impact';
+    margin-top: 10px;
+    font-size: 15px;
+}
+.card .card-actions {
+    margin-top: 30px;
+}
+.card .card-actions:last-child {
+    margin-top: 10px;
+}
+.card .card-actions label{
+    font-size: 14px;
+    font-weight: bold;
+}
+.card .card-actions input[type="text"]{
+    display: block;
+    width: 100%;
+    margin: 10px 0 10px;
+    font-size: 20px ;
+    border: 0;
+    border-bottom: 1px solid gray;
+}
+.card .card-actions input[type="text"]:focus{
+    outline: 0;
+}
+.card .card-actions button{
+    width: 110px;
+    padding: 5px;
+    color: white;
+    border: 0;
+    font-size: 20px;
+    border-radius: 3px;
+    background-color: rgb(14, 151, 170);
+}
+.card .card-actions button:enabled{
+    background-color: rgba(14, 151, 170);
+    cursor: pointer;
+}
+.card .card-actions button:disabled{
+    background-color: rgba(14, 151, 170, 0.6);
+    cursor: not-allowed;
+}
+.card  form {
+    margin-top: 40px;
+    width: 99%;
+    margin: 0 auto;
+}
+.tasks-container #tasks *{
+    text-align: start;
+}
+.tasks-container #tasks .task-element{
+    margin: 5px 0;
+}
+.tasks-container #tasks .task-element .buttons button:first-child{
+    font-weight: 600;
+    width: 70px;
+    background-color: yellow;
+    text-align: center;
+}
+.tasks-container #tasks .task-element .buttons button:last-child{
+    width: 100px;
+    font-weight: 600;
+    background-color: rgb(241, 114, 114);
+    text-align: center;
+}
+.tasks-container .task-name,
+.number {
+    font-weight: 600;
+}
+small{
+    text-align: right;
+    position: absolute;
+    /* width: 100%; */
+    right: 0;
+    font-weight: bold;
+}
+/* message animation */
+.slide{animation: slide 0.5s ease;}
+@keyframes slide {
+    0%{transform: translateY(-16px);}
+    100%{transform: translateY(0px);}
+}
