@@ -100,3 +100,12 @@ function deleteTask(index){
 }
 checkInputStatus()
 
+function filterTasks(){
+  const taskFilter = JSON.parse(localStorage.getItem('tasks'))
+
+  taskFilter.forEach(
+    (task) => {
+      
+    }
+  )
+}

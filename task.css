@@ -106,3 +106,9 @@ small{
     0%{transform: translateY(-16px);}
     100%{transform: translateY(0px);}
 }
+
+.delete{
+    width: 400px;
+   right: 0;
+   height: 100%;
+}
