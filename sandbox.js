@@ -23,6 +23,7 @@ const addTask = ()=>{
   
   createTask()
   // checkSelection()
+  checkSub('', true)
 }
 
 
@@ -89,6 +90,11 @@ function showMessage(text, className){
   }, 10);
 }
 
+function checkSub(attr, value) {
+  addTaskInput.value = value;
+  addTaskInput.disabled = attr;
+}
+
 function deleteTask(index){
   if(confirm('Delete task?')){
     taskArray.splice(index, 1)
@@ -100,12 +106,24 @@ function deleteTask(index){
 }
 checkInputStatus()
 
+const filterInput = document.getElementById('filter-input').addEventListener('input', filterTasks);
+
 function filterTasks(){
   const taskFilter = JSON.parse(localStorage.getItem('tasks'))
+  let searchTerm = filterInput.value
 
-  taskFilter.forEach(
-    (task) => {
-      
+
+  taskFilter.forEach((task) => {
+    if(searchTerm === task.textContent.toLowerCase()){
+      task.textContent = 'red'
     }
-  )
+  })
+}
+
+function editTask (index){
+  addTaskInput.addEventListener('focus', (e)=> {
+    index.innerHTML = e.target.value
+  })
+
+  localStorage.setItem('tasks', JSON.stringify(taskArray))
 }
